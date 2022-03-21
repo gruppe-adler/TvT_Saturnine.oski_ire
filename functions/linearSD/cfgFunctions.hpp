@@ -21,6 +21,7 @@ class grad_linearSD {
         class respawnPlayer {};
         class setActiveSectors {};
         class setLastRound {};
+        class setEndRound {};
         class setTimeAndDate {};
         class setWeather {};
         class spawnSectorVehicles {};

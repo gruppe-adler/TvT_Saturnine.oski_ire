@@ -4,7 +4,8 @@
     params ["_commandType"];
 
     private _availableCommands = [
-        "lastRound"
+        "lastRound",
+        "endRound"
     ];
 
     private _fnc_default = {
@@ -16,8 +17,13 @@
         [] remoteExec [QFUNC(setLastRound),2,false];        
     };
 
+    private _fnc_endRound = {
+        [] remoteExec [QFUNC(setEndRound),2,false];        
+    };
+
     switch (toLower _commandType) do {
         case ("lastround"): _fnc_lastRound;
+        case ("endRound"): _fnc_endRound;
         default _fnc_default;
     };
 
